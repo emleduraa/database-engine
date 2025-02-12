@@ -1,4 +1,4 @@
-package constants;
+package   constants;
 
 public final class Constants {
 	public static final String ERROR_MESSAGE_TABLE_NAME = "Invalid table name, please enter a correct one";
