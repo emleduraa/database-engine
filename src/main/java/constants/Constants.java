@@ -1,8 +1,7 @@
-package   
-	constants;
+package constants;
 
 public final class Constants {
-	public static final String ERROR_MESSAGE_TABLE_NAME = "Invalid table name, please enter a correct one";
+	public static final String ERROR_MESSAGE_TABLE_NAME = "Invalid table name, please enter a correct onee";
 
 	public static final String ERROR_MESSAGE_REPEATED_TABLE_NAME = "Table name already exists, please enter another one";
 
