@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('take code') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'SUJA', url: 'https://github.com/emleduraa/database-engine.git']])
+            }
+        }
+        stage('errorckeck') {
+            steps{
+                sh 'mvn validate'
+            }
+        }
+        stage ('build') {
+            steps {
+                sh 'mvn compile'
+                sh 'mvn test'
+                sh 'mvn package'
+            }
+        }
+    }
+}
